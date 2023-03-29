@@ -15,7 +15,7 @@
   </head>
   <body>
     <!-- WEIGHT CONVERTER -->
-    <div class="container text-center">
+    <div class="container text-center border border-primary">
       <h4>Weight Converter</h4>
 
       <p>
@@ -28,67 +28,70 @@
           onchange="KiloConverter()"
         />
       </p>
-      <table>
-      <p class="fw-bold">Grams: <span id="outputGrams"></span></p>
-      <p class="fw-bold">Tonne: <span id="outputTonne"></span></p>
-      <p class="fw-bold">Milligram: <span id="outputMilligram"></span></p>
-      <p class="fw-bold">Microgram: <span id="outputMicrogram"></span></p>
-      <p class="fw-bold">Imperial Ton: <span id="outputImperialTon"></span></p>
-      <p class="fw-bold">US Ton: <span id="outputUsTon"></span></p>
-      <p class="fw-bold">Stone: <span id="outputStone"></span></p>
-      <p class="fw-bold">Pound: <span id="outputPound"></span></p>
-      <p class="fw-bold">Ounce: <span id="outputOunce"></span></p>
-      </div>
+      <table class="table table-bordered border-primary">
+        <p class="fw-bold">Grams: <span id="outputGrams"></span></p>
+        <p class="fw-bold">Tonne: <span id="outputTonne"></span></p>
+        <p class="fw-bold">Milligram: <span id="outputMilligram"></span></p>
+        <p class="fw-bold">Microgram: <span id="outputMicrogram"></span></p>
+        <p class="fw-bold">
+          Imperial Ton: <span id="outputImperialTon"></span>
+        </p>
+        <p class="fw-bold">US Ton: <span id="outputUsTon"></span></p>
+        <p class="fw-bold">Stone: <span id="outputStone"></span></p>
+        <p class="fw-bold">Pound: <span id="outputPound"></span></p>
+        <p class="fw-bold">Ounce: <span id="outputOunce"></span></p>
       </table>
-      <script>
-        function KiloConverter(valNum) {
-          var inputValue = document.getElementById("inputKilo").value;
-          document.getElementById("outputGrams").innerHTML =
-            Number(inputValue) * 1000;
-          document.getElementById("outputTonne").innerHTML =
-            Number(inputValue) / 1000;
-          document.getElementById("outputMilligram").innerHTML =
-            Number(inputValue) * 1e6;
-          document.getElementById("outputMicrogram").innerHTML =
-            Number(inputValue) * 1e9;
-          document.getElementById("outputImperialTon").innerHTML =
-            Number(inputValue) / 1016;
-          document.getElementById("outputUsTon").innerHTML =
-            Number(inputValue) / 907.2;
-          document.getElementById("outputStone").innerHTML =
-            Number(inputValue) / 6.35;
-          document.getElementById("outputPound").innerHTML =
-            Number(inputValue) * 2.205;
-          document.getElementById("outputOunce").innerHTML =
-            Number(inputValue) * 35.274;
-        }
-      </script>
-    
+    </div>
+    <script>
+      function KiloConverter(valNum) {
+        var inputValue = document.getElementById("inputKilo").value;
+        document.getElementById("outputGrams").innerHTML =
+          Number(inputValue) * 1000;
+        document.getElementById("outputTonne").innerHTML =
+          Number(inputValue) / 1000;
+        document.getElementById("outputMilligram").innerHTML =
+          Number(inputValue) * 1e6;
+        document.getElementById("outputMicrogram").innerHTML =
+          Number(inputValue) * 1e9;
+        document.getElementById("outputImperialTon").innerHTML =
+          Number(inputValue) / 1016;
+        document.getElementById("outputUsTon").innerHTML =
+          Number(inputValue) / 907.2;
+        document.getElementById("outputStone").innerHTML =
+          Number(inputValue) / 6.35;
+        document.getElementById("outputPound").innerHTML =
+          Number(inputValue) * 2.205;
+        document.getElementById("outputOunce").innerHTML =
+          Number(inputValue) * 35.274;
+      }
+    </script>
+
     <br />
     <!-- LENGTH CONVERTER -->
-    <h4>Lenght Converter</h4>
+    <div class="container text-center border border-success">
+      <h4>Lenght Converter</h4>
 
-    <p>
-      <label>Foot</label>
-      <input
-        id="inputFeet"
-        type="number"
-        placeholder="feet"
-        0ninput="LenghtConverter(this.value)"
-        onchange="LenghtConverter()"
-      />
-    </p>
-    <p>Kilometre <span id="outputKilometre"></span></p>
-    <p>Meters <span id="outputMeters"></span></p>
-    <p>Centimeter <span id="outputCentimeter"></span></p>
-    <p>Millimetre <span id="outputMillimetre"></span></p>
-    <p>Micrometres <span id="outputMicrometres"></span></p>
-    <p>Nanometre <span id="outputNanometre"></span></p>
-    <p>Mile <span id="outputMile"></span></p>
-    <p>Yard <span id="outputYard"></span></p>
-    <p>Inch <span id="outputInch"></span></p>
-    <p>Nautical Mile <span id="outputNauticalMile"></span></p>
-
+      <p>
+        <label class="fw-bold">Foot</label>
+        <input
+          id="inputFeet"
+          type="number"
+          placeholder="feet"
+          0ninput="LenghtConverter(this.value)"
+          onchange="LenghtConverter()"
+        />
+      </p>
+      <p class="fw-bold">Kilometre <span id="outputKilometre"></span></p>
+      <p class="fw-bold">Meters <span id="outputMeters"></span></p>
+      <p class="fw-bold">Centimeter <span id="outputCentimeter"></span></p>
+      <p class="fw-bold">Millimetre <span id="outputMillimetre"></span></p>
+      <p class="fw-bold">Micrometres <span id="outputMicrometres"></span></p>
+      <p class="fw-bold">Nanometre <span id="outputNanometre"></span></p>
+      <p class="fw-bold">Mile <span id="outputMile"></span></p>
+      <p class="fw-bold">Yard <span id="outputYard"></span></p>
+      <p class="fw-bold">Inch <span id="outputInch"></span></p>
+      <p class="fw-bold">Nautical Mile <span id="outputNauticalMile"></span></p>
+    </div>
     <script>
       function LenghtConverter(valNum) {
         var inputValue = document.getElementById("inputFeet").value;
@@ -114,31 +117,32 @@
           Number(inputValue) / 6076;
       }
     </script>
-
+    <br />
     <!-- TIME CONVERTER -->
-    <h4>TIME Converter</h4>
-    <p>
-      <label>Hour</label>
-      <input
-        id="inputHour"
-        type="number"
-        placeholder="Hour"
-        0ninput="HourConverter(this.value)"
-        onchange="HourConverter()"
-      />
-    </p>
-    <p>Nanosecond <span id="outputNanosecond"></span></p>
-    <p>Microsecond <span id="outputMicrosecond"></span></p>
-    <p>Millisecond <span id="outputMillisecond"></span></p>
-    <p>Second <span id="outputSecond"></span></p>
-    <p>Minute <span id="outputMinute"></span></p>
-    <p>Day <span id="outputDay"></span></p>
-    <p>Week <span id="outputWeek"></span></p>
-    <p>Month <span id="outputMonth"></span></p>
-    <p>Calendar Year <span id="outputCalendarYear"></span></p>
-    <p>Decade <span id="outputDecade"></span></p>
-    <p>Century <span id="outputCentury"></span></p>
-
+    <div class="container text-center border border-warning">
+      <h4>TIME Converter</h4>
+      <p>
+        <label class="fw-bold">Hour</label>
+        <input
+          id="inputHour"
+          type="number"
+          placeholder="Hour"
+          0ninput="HourConverter(this.value)"
+          onchange="HourConverter()"
+        />
+      </p>
+      <p class="fw-bold">Nanosecond <span id="outputNanosecond"></span></p>
+      <p class="fw-bold">Microsecond <span id="outputMicrosecond"></span></p>
+      <p class="fw-bold">Millisecond <span id="outputMillisecond"></span></p>
+      <p class="fw-bold">Second <span id="outputSecond"></span></p>
+      <p class="fw-bold">Minute <span id="outputMinute"></span></p>
+      <p class="fw-bold">Day <span id="outputDay"></span></p>
+      <p class="fw-bold">Week <span id="outputWeek"></span></p>
+      <p class="fw-bold">Month <span id="outputMonth"></span></p>
+      <p class="fw-bold">Calendar Year <span id="outputCalendarYear"></span></p>
+      <p class="fw-bold">Decade <span id="outputDecade"></span></p>
+      <p class="fw-bold">Century <span id="outputCentury"></span></p>
+    </div>
     <script>
       function HourConverter(valNum) {
         var inputValue = document.getElementById("inputHour").value;
@@ -166,20 +170,22 @@
           Number(inputValue) / 876000;
       }
     </script>
-
+    <br />
     <!-- TEMPERATURE CONVERTER -->
-    <h4>TEMPERATURE Converter</h4>
-    <p>
-      <label>Degree Celsius</label>
-      <input
-        id="inputDegreeCelsius"
-        type="number"
-        placeholder="DegreeCelsius"
-        onchange="TempConverter()"
-      />
-    </p>
-    <p>Fahrenheit <span id="outputFahrenheit"></span></p>
-    <p>Kelvin <span id="outputKelvin"></span></p>
+    <div class="container text-center border border-info">
+      <h4>TEMPERATURE Converter</h4>
+      <p>
+        <label class="fw-bold">Degree Celsius</label>
+        <input
+          id="inputDegreeCelsius"
+          type="number"
+          placeholder="DegreeCelsius"
+          onchange="TempConverter()"
+        />
+      </p>
+      <p class="fw-bold">Fahrenheit <span id="outputFahrenheit"></span></p>
+      <p class="fw-bold">Kelvin <span id="outputKelvin"></span></p>
+    </div>
     <script>
       function TempConverter() {
         var inputValue = document.getElementById("inputDegreeCelsius").value;
